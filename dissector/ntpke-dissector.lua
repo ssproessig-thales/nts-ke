@@ -5,7 +5,7 @@
 local default_settings =
 {
     enabled      = true,        -- whether this dissector is enabled or not
-    ports         = {[123]=true, [4430]=true} -- TCP port numbers for NTS-KE
+    ports         = {[123]=true, [4460]=true} -- TCP port numbers for NTS-KE
 }
 
 ntske_protocol = Proto("NTS-KE",  "NTS Key Establishment")
