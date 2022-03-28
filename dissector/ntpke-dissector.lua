@@ -229,7 +229,7 @@ function ntske_protocol.dissector(buffer, pinfo, tree)
             break
         -- For new cookie or server negotiation 
         elseif rtv == 5 or rtv == 6 then
-            s = buffer:range(current_pointer + 2, msg_len):string()
+            s = buffer:range(current_pointer + 2, msg_len):bytes():tohex()
             subtree:add(record_body, buffer(current_pointer+2, msg_len), s)
             current_pointer = current_pointer + 2 + msg_len
         -- For port negotiation
